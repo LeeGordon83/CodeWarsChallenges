@@ -1,30 +1,24 @@
 // https://www.codewars.com/kata/5853213063adbd1b9b0000be
 
-function streetFighterSelection(fighters, position, moves){
-  
-  const array1length = fighters[0].length
-  const array2length = fighters[0].length
-  let selections = []
-  
-  
-  
-  for (var i = 0; i <= moves.length; i++) {
-    switch(moves[i]) {
-        case "up" :
+function streetFighterSelection (fighters, position, moves) {
+  const selections = []
+
+  for (let i = 0; i <= moves.length; i++) {
+    switch (moves[i]) {
+      case 'up' :
         if (position[0] != 0) {
           position = [0, position[1]]
         }
         selections.push(fighters[0][position[1]])
 
-          
         break
-        case "down" :
-        if (position[0] != 1) {
+      case 'down' :
+        if (position[0] !== 1) {
           position = [1, position[1]]
         }
-          selections.push(fighters[1][position[1]])
+        selections.push(fighters[1][position[1]])
         break
-        case "left" :
+      case 'left' :
         if (position[1] === 0) {
           position = [position[0], 5]
         } else {
@@ -32,7 +26,7 @@ function streetFighterSelection(fighters, position, moves){
         }
         selections.push(fighters[position[0]][position[1]])
         break
-        case "right" :
+      case 'right' :
         if (position[1] === 5) {
           position = [position[0], 0]
         } else {
@@ -42,10 +36,8 @@ function streetFighterSelection(fighters, position, moves){
         break
     }
   }
-  
-  
 
   console.log(selections)
-  
-  return selections;
+
+  return selections
 }

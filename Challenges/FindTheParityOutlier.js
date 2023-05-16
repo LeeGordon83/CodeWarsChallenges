@@ -11,8 +11,8 @@ function findOutlier (integers) {
       odd.push(integer)
     }
   })
-  
-  if(even.length === 1) {
+
+  if (even.length === 1) {
     return even[0]
   } else {
     return odd[0]
