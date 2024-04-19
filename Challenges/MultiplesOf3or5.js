@@ -24,3 +24,4 @@ function solution (number) {
     return finalValue
   } else return 0
 }
+console.log(solution(10)) // edit to desired number

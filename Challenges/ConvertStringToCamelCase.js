@@ -12,3 +12,4 @@ function toCamelCase (str) {
   console.log(newString)
   return newString
 }
+toCamelCase('hello_world') // Replace "hello_world" with your desired string

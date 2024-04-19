@@ -1,30 +1,34 @@
 function incrementString (strng) {
-  let numberResult = getNumbers(strng)
+  const numberResult = getNumbers(strng)
   let newNumber
-  
-  
-  
-  if(numberResult !== undefined) {
+
+  if (numberResult !== null) {
+    const numLength = numberResult.length
     newNumber = Number(numberResult) + 1
+    newNumber = newNumber.toString().padStart(numLength, '0')
   } else {
     newNumber = 1
   }
-  
-  
-  
-  let newString = appendNumber(strng, newNumber)
-  
- 
-  
+
+  const newString = appendNumber(strng, newNumber)
+
   return newString
 }
 
 function getNumbers (strng) {
-var numbers = strng.match(/\d/g)
-numbers = numbers.join("")
-return numbers
+  let numbers = strng.match(/\d+$/)
+  if (numbers !== null) {
+    numbers = numbers.join('')
+  }
+  return numbers
 }
 
 function appendNumber (strng, newNumber) {
-  strng.replace(/\d+/g, newNumber)
+  if (strng.match(/\d+$/)) {
+    return strng.replace(/\d+$/, newNumber)
+  } else {
+    return strng + newNumber
+  }
 }
+
+console.log(incrementString('foo')) // Output: foo1

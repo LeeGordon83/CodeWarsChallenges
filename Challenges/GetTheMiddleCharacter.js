@@ -8,3 +8,5 @@ function getMiddle (s) {
     return s.substring(startPoint, startPoint + 1)
   }
 }
+const result = getMiddle('example') // Replace "example" with the desired input string
+console.log(result)

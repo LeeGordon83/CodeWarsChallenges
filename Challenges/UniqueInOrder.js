@@ -8,3 +8,5 @@ const uniqueInOrder = function (iterable) {
 
   return unique
 }
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB')) // ['A', 'B', 'C', 'D', 'A', 'B']

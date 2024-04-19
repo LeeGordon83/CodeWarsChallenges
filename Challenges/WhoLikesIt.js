@@ -16,3 +16,5 @@ function likes (names) {
     return returnString
   } else { return 'no one likes this' }
 }
+
+console.log(likes(['Peter'])) // Add name here

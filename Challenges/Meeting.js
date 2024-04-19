@@ -20,3 +20,6 @@ function meeting (s) {
 
   return finalName
 }
+const names = 'John:Doe;Jane:Smith;Tom:Hanks' // Replace with the desired name list
+const result = meeting(names)
+console.log(result)

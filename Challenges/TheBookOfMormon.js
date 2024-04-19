@@ -3,11 +3,11 @@
 function Mormons (startingNumber, reach, target) {
   let missions = 0
 
-  if (target > startingNumber) {
-    for (let z = 0; startingNumber < target; missions++) {
-      startingNumber = (startingNumber * reach) + startingNumber
-    }
+  while (target > startingNumber) {
+    startingNumber = (startingNumber * reach) + startingNumber
+    missions++
+  }
 
-    return missions
-  } else { return missions }
+  return missions
 }
+console.log(Mormons(1, 3, 9))

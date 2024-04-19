@@ -24,3 +24,5 @@ function addZeros (startNum, appendNum) {
   console.log(numString)
   return numString
 }
+
+console.log(expandedForm(70304)) // add number here

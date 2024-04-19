@@ -6,7 +6,7 @@ function streetFighterSelection (fighters, position, moves) {
   for (let i = 0; i <= moves.length; i++) {
     switch (moves[i]) {
       case 'up' :
-        if (position[0] != 0) {
+        if (position[0] !== 0) {
           position = [0, position[1]]
         }
         selections.push(fighters[0][position[1]])
@@ -41,3 +41,11 @@ function streetFighterSelection (fighters, position, moves) {
 
   return selections
 }
+const fighters = [
+  ['Ryu', 'E.Honda', 'Blanka', 'Guile', 'Balrog', 'Vega'],
+  ['Ken', 'Chun Li', 'Zangief', 'Dhalsim', 'Sagat', 'M.Bison']
+]
+const position = [0, 0]
+const moves = ['up', 'left', 'right', 'down']
+
+streetFighterSelection(fighters, position, moves)

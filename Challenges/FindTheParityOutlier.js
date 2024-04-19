@@ -22,3 +22,7 @@ function findOutlier (integers) {
 function isEven (n) {
   return n % 2 === 0
 }
+
+const integers = [2, 4, 6, 7, 8]
+const result = findOutlier(integers)
+console.log(result)
